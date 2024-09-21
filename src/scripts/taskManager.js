@@ -7,7 +7,7 @@ class TaskManager {
 
     constructor() {
         if (TaskManager.#instance) {
-            console.log("task Manager is already craeted")
+            console.log("task Manager is already created")
             return TaskManager.#instance;
         }
         TaskManager.#instance = this;
@@ -19,6 +19,7 @@ class TaskManager {
         if (task instanceof taskCreator) {
             this.#taskMap.set(this.#index,task);
             this.#index++;
+            console.log(this.#taskMap);
         } else {
             console.log('give a correct task type')
         }

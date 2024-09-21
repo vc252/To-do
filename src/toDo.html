@@ -7,7 +7,14 @@
 </head>
 <body>
     <header>
-        myTODO
+        <div>
+            <div class="menuButton">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            myTODO
+        </div>
         <button>
             + add
         </button>
@@ -18,14 +25,72 @@
             <span class="Today">Today</span>
             <span class="inbox">Inbox</span>
             <span class="Week">Week</span>
-            <span>PROJECTS</span>
+            <div>
+                PROJECTS
+                <button id="add-project">+ add</button>
+            </div>
             <div class="project-box">
-                <button>Add Project</button>
+                <div data-id="0">
+                    sample1
+                    <button>clear</button>
+                </div>
             </div>
         </menu>
         <main>
-            
+            <div class="task">
+                <div>
+                    <input type="checkbox">
+                    <span>task_name</span>
+                </div>
+                <div>
+                    <span>dd/mm/yy</span>
+                    <div>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+    <dialog id="project-dialog">
+        <form method="dialog">
+            <label for="name">
+                Project name<strong>*</strong>
+            </label>
+            <input type="text" id="name" name="name" required maxlength="20">
+            <div>
+                <button type="submit">create</button>
+                <button class="close-button">cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="todo-dialog">
+        <form method="dialog">
+            <label for="topic">
+                Title<strong>*</strong>
+            </label>
+            <input type="text" id="topic" name="topic" required maxlength="20">
+            <label for="description">
+                description
+            </label>
+            <textarea name="description" id="description"></textarea>
+            <div>
+                <select name="project" id="project">
+                    <option value="inbox">inbox</option>
+                </select>
+                <input type="date" name="date">
+                <select name="priority" id="priority">
+                    <option value="normal">normal</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                    <option value="important">important</option>
+                </select>
+            </div>
+            <div>
+                <button class="submit-button" type="submit">submit</button>
+                <button class="close-button" type="button">close</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 </html>

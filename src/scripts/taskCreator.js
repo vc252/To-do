@@ -19,23 +19,18 @@ class Task {
     get topic() {
         return this.#topic;
     }
-
     get description() {
         return this.#description;
     }
-
     get priority() {
         return this.#priority;
     }
-
     get dueDate() {
         return this.#dueDate;
     }
-
     get project() {
         return this.#project;
     }
-
     get completed() {
         return this.#completed;
     }

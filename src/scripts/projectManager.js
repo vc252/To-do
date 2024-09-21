@@ -8,9 +8,14 @@ class ProjectManager {
             return ProjectManager.#instance
         }
         this.#projectSet = new Set();
+        this.#projectSet.add('inbox');
         ProjectManager.#instance = this;
     }
 
+    //we also need something to see the projects
+    getProjectSet() {
+        return this.#projectSet;
+    }
     addProject(project) {
         if (this.#projectSet.has(project)) {
             console.log('this project is already created');

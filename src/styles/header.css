@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: grey;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+header>button {
+    border-style: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: lightgreen;
+    color: rgb(43, 43, 43);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menuButton {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+  
+  /* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 6px) rotate(-45deg);
+}
+  
+  /* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -6px) rotate(45deg);
+}
